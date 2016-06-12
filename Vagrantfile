@@ -10,14 +10,12 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
 
     vb.memory = "2048"
-    vp.cpus = 2
+    vb.cpus = 2
 
     #vb.gui = true
     #vb.customize ["modifyvm", :id, "--vram", "64"]
     #vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
   end
-
-  config.ssh.forward_x11 = true
 
   #config.vm.provision "shell", inline: <<-SHELL
   #  sudo apt-get install -y lightdm lxde vim-gnome
@@ -32,6 +30,8 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-particles2 qtdeclarative5-dev
     sudo adduser ubuntu docker
   SHELL
+
+  config.ssh.forward_x11 = true
 
 end
 
