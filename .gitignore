@@ -2,5 +2,8 @@
 # vim
 *.swp
 
+# vagrant
+/.vagrant/
+
 /project/
 

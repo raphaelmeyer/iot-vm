@@ -10,6 +10,7 @@
     git clone git@github.com:raphaelmeyer/street-light-simulator.git
 
     git clone git@github.com:raphaelmeyer/streetlightd.git
+    cd streetlightd
     git checkout gathering
     git submodule update --init --recursive
 
