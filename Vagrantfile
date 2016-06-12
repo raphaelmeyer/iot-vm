@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y mosquitto-clients curl libgtest-dev google-mock
     sudo apt-get install -y qtbase5-dev qt5-default qml-module-qtquick2
     sudo apt-get install -y qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-particles2 qtdeclarative5-dev
-
+    sudo adduser ubuntu docker
   SHELL
 
 end

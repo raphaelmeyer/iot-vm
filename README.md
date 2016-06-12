@@ -25,7 +25,8 @@
     vagrant ssh
 
     ubuntu$ cd project/streetlightd
-    ubuntu$
+    ubuntu$ docker build -t streetlightd-amd64 streetlightd-amd64/
+    ubuntu$ make
 
 ## build simulator vagrant box
 
