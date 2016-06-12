@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.box = "ubuntu/xenial64"
 
-  config.vm.synced_folder "./project", "/home/vagrant/project"
+  config.vm.synced_folder "./project", "/home/ubuntu/project"
 
   config.vm.provider "virtualbox" do |vb|
 
@@ -23,7 +23,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
-    sudo apt-get install -y build-essential git cmake docker
+    sudo apt-get install -y build-essential git cmake docker.io
+    sudo apt-get install -y mosquitto-clients curl libgtest-dev google-mock
+    sudo apt-get install -y qtbase5-dev qt5-default qml-module-qtquick2
+    sudo apt-get install -y qml-module-qtquick-controls qml-module-qtquick-dialogs qml-module-qtquick-particles2 qtdeclarative5-dev
+
   SHELL
 
 end
